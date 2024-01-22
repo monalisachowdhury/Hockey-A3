@@ -4,18 +4,199 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Hockey</title>
+    <!-- Tailwild & DaisyUI -->
     <link href="https://cdn.jsdelivr.net/npm/daisyui@4.6.0/dist/full.min.css" rel="stylesheet" type="text/css" />
     <script src="https://cdn.tailwindcss.com"></script>
+    <!-- Google font -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Manrope:wght@400;500;600;700;800&display=swap"     rel="stylesheet">
+
+    <!-- Tailwind custome classes -->
+    <script>
+        tailwind.config = {
+          theme: {
+            extend: {
+              colors: {
+                clifford: '#da373d',
+                'color-primary': '#FF4240',
+                'text-color': 'rgba(19, 19, 24, 0.60)'
+                
+              }
+            }
+          }
+        }
+      </script>
+    <style>
+        .font-manrope{
+            font-family: 'Manrope', sans-serif;
+        }
+    </style>
 </head>
 <body>
-    <header>
-
+    <header class="md:container md:mx-auto">
+        <nav>
+            <div class="navbar bg-base-100">
+                <div class="navbar-start">
+                  <div class="dropdown">
+                    <div tabindex="0" role="button" class="btn btn-ghost lg:hidden">
+                      <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h8m-8 6h16" /></svg>
+                    </div>
+                    <ul tabindex="0" class="menu menu-sm dropdown-content mt-3 z-[1] p-2 shadow bg-base-100 rounded-box w-52">
+                      <li><a class="text-color-primary">Home</a></li>
+                      <li><a>About</a></li>
+                      <li><a>Pages</a></li>
+                      <li><a>Blog</a></li>
+                      <li><a>Contact</a></li>
+                    </ul>
+                  </div>
+                  <a class="btn btn-ghost text-xl lg:text-4xl">Hockey<span class="text-color-primary">’</span>s</a>
+                </div>
+                <div class="navbar-center hidden lg:flex">
+                  <ul class="menu menu-horizontal px-1 text-base font-normal">
+                    <li><a class="text-color-primary">Home</a></li>
+                      <li><a>About</a></li>
+                      <li><a>Pages</a></li>
+                      <li><a>Blog</a></li>
+                      <li><a>Contact</a></li>
+                  </ul>
+                </div>
+                <div class="navbar-end gap-1">
+                    <div class="btn btn-ghost">
+                        <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="w-6 h-6">
+                        <path stroke-linecap="round" stroke-linejoin="round" d="m21 21-5.197-5.197m0 0A7.5 7.5 0 1 0 5.196 5.196a7.5 7.5 0 0 0 10.607 10.607Z" />
+                        </svg>   
+                    </div>
+                  <a class="btn bg-color-primary uppercase text-white">Get Ticket</a>
+                </div>
+              </div>
+        </nav>
+        <!-- slider or carosel -->
+        <div class="carousel mx-4 w-[335px] h-[200px] lg:w-full lg:h-[550px] my-14">
+          <!-- slide 1 -->
+          <div id="slide1" class="carousel-item relative w-full">
+            <img src="Images/1.png" class="w-full rounded-2xl" />
+            <div class="absolute flex gap-5 transform -translate-y-1/2 left-5 right-5 top-3/4">
+              <a href="#slide4" class="btn btn-circle bg-black text-white">❮</a> 
+              <a href="#slide2" class="btn btn-circle bg-black text-white">❯</a>
+            </div>
+          </div> 
+          <!-- slide 2 -->
+          <div id="slide2" class="carousel-item relative w-full">
+            <img src="Images/2.png" class="w-full rounded-2xl" />
+            <div class="absolute flex gap-5 transform -translate-y-1/2 left-5 right-5 top-3/4">
+              <a href="#slide1" class="btn btn-circle bg-black text-white">❮</a> 
+              <a href="#slide3" class="btn btn-circle bg-black text-white">❯</a>
+            </div>
+          </div> 
+          <!-- slide 3 -->
+          <div id="slide3" class="carousel-item relative w-full">
+            <img src="Images/3.png" class="w-full rounded-2xl" />
+            <div class="absolute flex gap-5 transform -translate-y-1/2 left-5 right-5 top-3/4">
+              <a href="#slide2" class="btn btn-circle bg-black text-white">❮</a> 
+              <a href="#slide4" class="btn btn-circle bg-black text-white">❯</a>
+            </div>
+          </div> 
+        </div>
     </header>
-    <main>
+    <main class="md:container md:mx-auto">
+      <!-- Rating -->
+        <section class="my-24">
+          <hr class="w-[335px] lg:w-full bg-zinc-200">
+            <h3 class="text-3xl lg:text-5xl mt-6 mb-6 font-semibold text-center">Professional Hockeys Club</h3>
+            <p class="text-center text-text-color mb-6"> Hockey has remained a sport of marginal popularity in Cleveland, despite periods of great success by the city's professional teams.</p>
+            <hr class="w-[335px] lg:w-full bg-zinc-200">
+            <!-- Radial progress -->
+            <div class="mt-14 mb-14 gap-5 grid grid-cols-1 lg:grid-cols-4">
+              <!-- Radial 1 -->
+              <div class="card items-center">
+                <div class="radial-progress text-color-primary bg-inherit text-primary-content" style="--value:87;" role="progressbar">
+                  <p class="text-black">87%</p>
+                </div>
+                <div class="card-body items-center">
+                  <h2 class="card-title">Player Facility</h2>
+                  <p class="text-text-color">Sport facility management refers to the Player Facility.</p>
+                  </div>
+              </div>
+              <!-- Radial 2 -->
+              <div class="card items-center">
+                <div class="radial-progress text-emerald-400 bg-inherit text-primary-content" style="--value:95;" role="progressbar">
+                  <p class="text-black">95%</p>
+                </div>
+                <div class="card-body items-center">
+                  <h2 class="card-title">Experienced Coach</h2>
+                  <p class="text-text-color">Sport facility management refers to the Experienced Coach.</p>
+                  </div>
+              </div>
+              <!-- Radial 3 -->
+              <div class="card items-center">
+                <div class="radial-progress text-yellow-400 bg-inherit text-primary-content" style="--value:90;" role="progressbar">
+                  <p class="text-black">90%</p>
+                </div>
+                <div class="card-body items-center">
+                  <h2 class="card-title">Senior Player</h2>
+                  <p class="text-text-color">Sport facility management refers to the Senior Player.</p>
+                  </div>
+              </div>
+              <!-- Radial 4 -->
+              <div class="card items-center">
+                <div class="radial-progress text-teal-400 bg-inherit text-primary-content" style="--value:80;" role="progressbar">
+                  <p class="text-black">80%</p>
+                </div>
+                <div class="card-body items-center">
+                  <h2 class="card-title">Training Ground</h2>
+                  <p class="text-text-color">Sport facility management refers to the Training Ground.</p>
+                  </div>
+              </div>
+            </div>
+            <hr class="w-[335px] lg:w-full bg-zinc-200">
+        </section>
+        <!-- Program section -->
+        <section class="my-24">
+          <hr class="w-[335px] lg:w-full bg-zinc-200">
+            <h3 class="text-3xl lg:text-5xl mt-6 mb-6 font-semibold text-center">Program Sections</h3>
+            <p class="text-center text-text-color mb-6"> Hockey training programs designed to help hockey players improve their game no matter their age, skill level, or training experience.</p>
+            <hr class="w-[335px] lg:w-full bg-zinc-200">
 
+            <div>
+               <!-- Program 1 -->
+            <div class="hero min-h-screen" style="background-image: url(Images/2.png);">
+              <div class="hero-overlay bg-opacity-30"></div>
+              <div class="hero-content text-center text-neutral-content">
+                <div class="max-w-md">
+                  <h1 class="mb-5 text-3xl font-bold">Hello there</h1>
+                  <p class="mb-5">Provident cupiditate voluptatem et in. Quaerat fugiat ut assumenda excepturi exercitationem quasi. In deleniti eaque aut repudiandae et a id nisi.</p>
+                  <button class="btn bg-color-primary border-0 text-white uppercase">Register Now!</button>
+                </div>
+              </div>
+            </div>
+            <!-- Program 2 -->
+            <div class="hero min-h-screen" style="background-image: url(Images/3.png)">
+              <div class="hero-overlay bg-opacity-30"></div>
+              <div class="hero-content text-center text-neutral-content">
+                <div class="max-w-md">
+                  <h1 class="mb-5 text-3xl font-bold">Hello there</h1>
+                  <p class="mb-5">Provident cupiditate voluptatem et in. Quaerat fugiat ut assumenda excepturi exercitationem quasi. In deleniti eaque aut repudiandae et a id nisi.</p>
+                  <button class="btn bg-color-primary border-0 text-white uppercase">Register Now!</button>
+                </div>
+              </div>
+            </div>
+            <!-- Program 3 -->
+            <div class="hero min-h-screen" style="background-image: url(Images/4.png);">
+              <div class="hero-overlay bg-opacity-30"></div>
+              <div class="hero-content text-center text-neutral-content">
+                <div class="max-w-md">
+                  <h1 class="mb-5 text-3xl font-bold">Hello there</h1>
+                  <p class="mb-5">Provident cupiditate voluptatem et in. Quaerat fugiat ut assumenda excepturi exercitationem quasi. In deleniti eaque aut repudiandae et a id nisi.</p>
+                  <button class="btn bg-color-primary border-0 text-white uppercase">Register Now!</button>
+                </div>
+              </div>
+            </div>
+            </div>
+        </section>
     </main>
     <footer>
-        
+
     </footer>
 </body>
 </html>
